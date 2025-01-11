@@ -1,0 +1,312 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(2, 10, 81);
+  color: rgb(255, 255, 255);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width:100%;
+  background: #4b06a6;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  font-weight: bold;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: purple;
+}
+
+.right {
+  font-size: 1.2rem;
+  display: flex;
+  padding: 10px;
+}
+
+/* Section 1 */
+.section1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.mainleft {
+  font-size: 2rem;
+  font-weight: 500;
+  width: 40%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+spam {
+  color: aqua;
+  font-weight: 600;
+}
+
+#element {
+  color: aqua;
+  font-weight: 600;
+}
+
+.mainright {
+  height: auto;
+  width: 40%;
+}
+
+hr {
+  border: 0;
+  background: #097a7a;
+  height: 1.5px;
+  margin: 40px 83px;
+}
+
+/* Section 2 */
+.section2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  margin: 20px;
+}
+
+#ok {
+  color: yellow;
+}
+
+/* Fade-in Animation */
+#about {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cards Section */
+.carts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cart-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cart {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 188, 212, 0.5);
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+}
+
+.cart img {
+  width: 100%;
+  height: auto;
+}
+
+.cart-content {
+  padding: 15px;
+}
+
+.cart-title {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.cart-text {
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.cart-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: aqua;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+/* Footer Section */
+.footer-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.form-container,
+.contact-info {
+  flex: 1;
+  padding: 20px;
+  min-width: 300px;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-info {
+  background: rgb(0, 154, 192);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 900;
+}
+
+.contact-info h2,
+.contact-info p {
+  margin: 10px 0;
+}
+
+.bro {
+  color: #200b9d;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small Devices (Phones) */
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mainleft,
+  .mainright {
+    width: 90%;
+  }
+
+  .carts {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-section {
+    flex-direction: column;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media screen and (max-width: 1024px) {
+  .mainleft,
+  .mainright {
+    width: 45%;
+  }
+
+  .cart-container {
+    gap: 15px;
+  }
+
+  .footer-section {
+    padding: 10px;
+  }
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #4b06a6;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
